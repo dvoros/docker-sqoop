@@ -5,8 +5,8 @@ USER root
 
 ENV SQOOP_HOME /usr/local/sqoop
 
-RUN curl -L -k1 -s https://github.com/dvoros/sqoop/releases/download/release-3.0.0-dvoros1/sqoop-1.5.0-SNAPSHOT.bin__hadoop-3.0.0.tar.gz | tar -xz -C /usr/local
-RUN ln -s /usr/local/sqoop-1.5.0-SNAPSHOT.bin__hadoop-3.0.0 $SQOOP_HOME
+RUN curl -L -k1 -s http://apache.claz.org/sqoop/1.4.7/sqoop-1.4.7.bin__hadoop-2.6.0.tar.gz | tar -xz -C /usr/local
+RUN ln -s /usr/local/sqoop-1.4.7.bin__hadoop-2.6.0 $SQOOP_HOME
 
 ENV PATH $PATH:$SQOOP_HOME/bin
 
