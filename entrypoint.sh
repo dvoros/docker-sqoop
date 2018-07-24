@@ -1,7 +1,10 @@
 #!/bin/bash
 
+# This version of hive was not built to be built on, workaround that
+sed -i '$d' /etc/bootstrap.sh
+
 # Start Hadoop services
-/etc/docker-startup/hive-bootstrap.sh
+/etc/bootstrap.sh
 
 # Copy JDBC drivers (if mounted) to classpath
 cp /jdbc/* $SQOOP_HOME/lib
